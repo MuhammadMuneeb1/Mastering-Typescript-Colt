@@ -30,4 +30,4 @@ const nestedArray: string[][] = [
 ];
 
 // dataType[][][]: for 3-Dimensional Array;
-const demo: number[][][] = [[[1]]];
+const threeDimensionalArray: number[][][] = [[[1]]];
