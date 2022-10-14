@@ -1,0 +1,10 @@
+var movieTitle = 'Amadeus';
+movieTitle = 'Arrival';
+// movieTitle = 2;
+movieTitle.toUpperCase();
+var numCatLives = 10;
+numCatLives += 1;
+// numCatLives = 'zero';
+var gameOver = true;
+gameOver = false;
+// gameOver = 'true';
