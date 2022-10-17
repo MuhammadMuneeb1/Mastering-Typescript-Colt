@@ -1,13 +1,14 @@
+"use strict";
 // "|" Pipe Operator is a Union Operator ...
 // Union of dataTypes;
-var age = 20;
+let age = 20;
 age = 23;
 age = "24";
 // Union of objectTypes;
-var coordinates = { x: 1, y: 34 };
+let coordinates = { x: 1, y: 34 };
 coordinates = { lat: 321.213, lng: 23.334 };
 function printAge(age) {
-    console.log("You are ".concat(age, " years old"));
+    console.log(`You are ${age} years old`);
 }
 printAge(23);
 printAge("24");
@@ -26,19 +27,19 @@ function calculatePrice(price, tax) {
 // const numberArray: number[] = [1, 2, 3, 4];
 // const anyArray: any[] = [10, 20, "Hi", true, {}];
 // stringAndNumberArray allows both number and string dataTypes in an Array.
-var stringAndNumberArray = [15, 25, "abc", 'xyz'];
+const stringAndNumberArray = [15, 25, "abc", 'xyz'];
 // stringOrNumberArray only allows either number or string dataType in an Array.
-var stringOrNumberArray = [0, 1, 2, 3];
+let stringOrNumberArray = [0, 1, 2, 3];
 stringOrNumberArray = ['a', 'b', 'c'];
 // Object Data Types Union with an Array.
-var objTypesArray = [];
+const objTypesArray = [];
 objTypesArray.push({ lat: 321.213, lng: 23.334 });
 objTypesArray.push({ x: 213, y: 43 });
 // Literals Types - allows us to Assign specific value to a variable;
-var zero = 0;
-var hi = "hi";
+const zero = 0;
+const hi = "hi";
 // Union of Literal Types;
-var literalTypesUnion = "Happy";
+let literalTypesUnion = "Happy";
 literalTypesUnion = "Sad";
-var customLiteralTypesUnion = "Friday";
+let customLiteralTypesUnion = "Friday";
 customLiteralTypesUnion = "Thursday";
