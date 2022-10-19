@@ -1,4 +1,7 @@
 "use strict";
+// npx tsc 
+// npx tsc -w filename.ts
+// npx tsc --watch
 const norma = {
     breed: "Chicken Breed",
     eggsPerWeek: 4,
