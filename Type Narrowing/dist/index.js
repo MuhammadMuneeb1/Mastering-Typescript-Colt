@@ -69,3 +69,42 @@ function printName(entity) {
         entity;
     }
 }
+function isCat(animal) {
+    return animal.numLives !== undefined;
+}
+function makeNoise(animal) {
+    if (isCat(animal)) {
+        animal;
+        return "Meoww";
+    }
+    else {
+        animal;
+        return "WOOFFF";
+    }
+}
+function getFarmAnimalSound(animal) {
+    switch (animal.kind) {
+        case "Parrot":
+            animal;
+            return "squawk";
+        case "Cow":
+            animal;
+            return "Moooo!";
+        case "Rooster":
+            animal;
+            return "Cockadoodledoo!";
+        case "Sheep":
+            animal;
+            return "Baahhhh";
+        default:
+            const _exhaustiveCheck = animal;
+            return _exhaustiveCheck;
+    }
+}
+const stevie = {
+    name: "Stevie Chicks",
+    weight: 2,
+    age: 1.5,
+    kind: "Rooster",
+};
+console.log(getFarmAnimalSound(stevie));

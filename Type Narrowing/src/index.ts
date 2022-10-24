@@ -120,3 +120,95 @@ function printName (entity: User | Company) {
         entity; // "Company" Class
     }
 }
+
+// Type Predicates - They tell type of something to Typescript. A Predicate takes the form "parameterName is Type"; 
+interface Cat {
+    name: string;
+    numLives: number;
+}
+
+interface Dog {
+    name: string;
+    breed: string;
+}
+
+// returnType of this Function is Predicate "animal is Cat";
+function isCat(animal: Cat | Dog): animal is Cat {
+    return (animal as Cat).numLives !== undefined;
+}
+
+function makeNoise(animal: Cat | Dog): string { 
+    if(isCat(animal)) {
+        animal; // Cat
+        return "Meoww";
+    } else {
+        animal; // Dog
+        return "WOOFFF";
+    }
+}
+
+
+
+
+// Discriminated Unions - have discriminant types. Disriminant type is a value assigned to  a property. We can use any name for property and can assign any value to it;
+interface Rooster {
+    name: string;
+    weight: number;
+    age: number;
+    kind: "Rooster"; // discriminant type
+}
+
+interface Cow {
+    name: string;
+    weight: number;
+    age: number;
+    kind: "Cow"; // discriminant type
+}
+
+interface Parrot {
+    name: string;
+    weight: number;
+    age: number;
+    kind: "Parrot"; // discriminant type
+}
+
+interface Sheep {
+    name: string;
+    weight: number;
+    age: number;
+    kind: "Sheep"; // discriminant type
+}
+
+type FarmAnimal = Parrot | Rooster | Cow | Sheep;
+
+function getFarmAnimalSound(animal: FarmAnimal) {
+    // Switch Statements are commonly used with "discriminant Unions". But we can also use any conditional statement.
+    switch(animal.kind) {
+        case "Parrot":
+            animal; // Parrot
+            return "squawk";
+        case "Cow": 
+            animal; // Cow
+            return "Moooo!";
+        case "Rooster":
+            animal; // Rooster
+            return "Cockadoodledoo!";  
+        case "Sheep":
+            animal; // Sheep
+            return "Baahhhh";          
+        // Exhaustiveness Checking or Never Checking;
+        default:
+            // We should "never" make it here, if we handled all cases correctly.
+            const _exhaustiveCheck: never = animal;
+            return _exhaustiveCheck;
+    }
+}
+
+const stevie: Rooster = { 
+    name: "Stevie Chicks", 
+    weight: 2,
+    age: 1.5,
+    kind: "Rooster",
+}
+
+console.log(getFarmAnimalSound(stevie));
