@@ -8,7 +8,8 @@
 // btn?.addEventListener('click', function() {
 // alert('Clicked');
 // }); 
-// or use Non-Null Assertion Operator "!" - It tells typescript that a value is not "null";
+// or use Non-Null Assertion Operator "!" - It tells typescript that a value is not "null" or "undefined";
+// "!" Non-null assertion operator - expression operator may be used to assert that its operand or a value is non-null and non-undefined in contexts where the type checker is unable to conclude that fact.
 // Now, "button" variable dataType is "HTMLElement".
 // use "!" only in the situation where you know that Html Elements value would be found via typescript. Else, don't use it.
 const button = document.getElementById('btn');
