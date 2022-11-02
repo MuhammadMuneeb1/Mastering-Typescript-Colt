@@ -1,18 +1,19 @@
 import React from "react";
 
-// By default, ".jsx" or ".tsx" elements are of type, "JSX.Element". This is a Regular Function not a React Functional Component.
+// By default, ".jsx" or ".tsx" elements are of type, "JSX.Element". 
 
 // Specifying the "types" of props in neccessary.
 interface GreeterProps {
     person: string;
 }
 /*
+This is a Regular Function not a React Functional Component.
 function Greeter(props: {person: string}): JSX.Element {  Here "Object" is a type of props we are receiving in this function. */
 
 /*
 function Greeter(props: GreeterProps): JSX.Element { Here "interface" is a type of props we are receiving in this function. */
 
-function Greeter({ person }: GreeterProps): JSX.Element { // In React we can also Destructure from the props. 
+function Greeter({ person }: GreeterProps): JSX.Element { // In React, We can also Destructure from the props. 
     return <h1>Hello, {person}</h1>;
 }
 
